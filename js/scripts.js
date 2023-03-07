@@ -46,15 +46,23 @@ function addListItem(pokemon) {
   let button = document.createElement('button');
   button.innerText = pokemon.name;
   button.classList.add('pokemon-button');
+  // Console log the pokemon object when clicked
+  button.addEventListener('click',function() {showDetails(pokemon)});
   listItem.appendChild(button);
   list.appendChild(listItem);
+}
+
+// Show future details ob the passed pokemon object
+function showDetails(pokemon) {
+  console.log(pokemon);
 }
 
 // Return both functions from pokemonRepository IIFE
   return {
     getAll: getAll,
     add: add,
-    addListItem: addListItem
+    addListItem: addListItem,
+    showDetails: showDetails
   }
 
 })();
