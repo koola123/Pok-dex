@@ -1,7 +1,6 @@
 
-
-// Create a PokemonList Array
-let pokemonList = [
+// Wrap pokemonlist into an IIFE
+let pokemonList = (function() {
   {
     name: "Bulbasaur",
     height: 1.7,
@@ -28,12 +27,22 @@ let pokemonList = [
     types: ["Wind, Flower"]
   }
 ];
+})();
 
-// Use a For Loop to print out the PokemonList objects to the DOM
-for (let i=0; i< pokemonList.length; i++) {
-  if (pokemonList[i].height > 2.0) {
-    document.write( "<div>" + pokemonList[i].name + " " + "(height: " + pokemonList[i].height +")" + ' - Wow, that\'s big!' + "</div>")
-  } else {
-    document.write("<div>" + pokemonList[i].name + " " + "(height: " + pokemonList[i].height +")" + "</div>");
-  }
-}
+
+
+// ForEach() Loop to print out the pokemonList
+pokemonList.forEach(function(item) {
+  document.write("<div>" + item.name + " " + item.height + " " +  item.types + " " + "</div>")
+})
+
+//
+// // For loop to print out the pokemonlist to the DOM by using the document.write built-in function
+// for (let i=0; i< pokemonList.length; i++) {
+// // If else statement to highlight and print out the pokemon with the tallest height
+//   if (pokemonList[i].height > 2.0) {
+//     document.write( "<div>" + pokemonList[i].name + " " + "(height: " + pokemonList[i].height +")" + ' - Wow, that\'s big!' + "</div>")
+//   } else {
+//     document.write("<div>" + pokemonList[i].name + " " + "(height: " + pokemonList[i].height +")" + "</div>");
+//   }
+// }
