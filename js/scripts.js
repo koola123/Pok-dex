@@ -31,5 +31,9 @@ let pokemonList = [
 
 // Use a For Loop to print out the PokemonList objects to the DOM
 for (let i=0; i< pokemonList.length; i++) {
-  document.write("<div>" + pokemonList[i].name + " " + "(height: " + pokemonList[i].height +")" + "</div>");
+  if (pokemonList[i].height > 2.0) {
+    document.write( "<div>" + pokemonList[i].name + " " + "(height: " + pokemonList[i].height +")" + ' - Wow, that\'s big!' + "</div>")
+  } else {
+    document.write("<div>" + pokemonList[i].name + " " + "(height: " + pokemonList[i].height +")" + "</div>");
+  }
 }
