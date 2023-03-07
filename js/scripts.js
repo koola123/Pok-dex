@@ -35,13 +35,26 @@ let pokemonRepository = (function() {
   }
 
 // Function to add a new pokemon object to the pokemonlist array
-  function add(item) {
-    pokemonList.push(item);
+  function add(pokemon) {
+      pokemonList.push(pokemon);
   }
+
+// Crate a list item for each new pokemon object
+function addListItem(pokemon) {
+  let list = document.querySelector('.pokemon-list');
+  let listItem = document.createElement('li');
+  let button = document.createElement('button');
+  button.innerText = pokemon.name;
+  button.classList.add('pokemon-button');
+  listItem.appendChild(button);
+  list.appendChild(listItem);
+}
+
 // Return both functions from pokemonRepository IIFE
   return {
     getAll: getAll,
-    add: add
+    add: add,
+    addListItem: addListItem
   }
 
 })();
@@ -50,7 +63,9 @@ let pokemonRepository = (function() {
 // Add a new pokemon object to the pokemonlist
 pokemonRepository.add({name: "Charmander", height: 10, types: ["Fire", "Volcano"]})
 
-// ForEach() Loop to print out the pokemonList
+// ForEach() function to print out the pokemonList
+// By using addListItem()
 pokemonRepository.getAll().forEach(function(item) {
-  document.write("<div>" + item.name + " " + item.height + " " +  item.types + " " + "</div>")
+  return pokemonRepository.addListItem(item);
+
 })
