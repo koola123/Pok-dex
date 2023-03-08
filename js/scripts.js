@@ -2,7 +2,62 @@
 let pokemonRepository = (function() {
 // Proteced pokemonlist inside IIFE
   let pokemonList = [];
-  let apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=150";
+  let apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=55";
+
+  let modalContainer = document.getElementById('modal-container');
+
+  // Function Show Modal
+  function showModal(title, text, img) {
+    // Clear all existing modal content
+    modalContainer.innerHTML = "";
+
+    let modal = document.createElement('div');
+    modal.classList.add('modal');
+
+    // Add the new modal content
+    let closeButton = document.createElement('button');
+    closeButton.classList.add('modal-close');
+    closeButton.innerHTML = "X";
+    closeButton.addEventListener('click', hideModal);
+
+    let titleElement = document.createElement('h1');
+    titleElement.innerText = title;
+
+    let contentElement = document.createElement('p');
+    contentElement.innerText = "height: "+ text;
+
+    let imageElement = document.createElement('img');
+    imageElement.setAttribute('src', img);
+    imageElement.setAttribute("width", "200");
+    imageElement.setAttribute("height", "200");
+
+    modal.appendChild(closeButton);
+    modal.appendChild(titleElement);
+    modal.appendChild(contentElement);
+    modal.appendChild(imageElement);
+    modalContainer.appendChild(modal);
+
+    modalContainer.classList.add('is-visible');
+  }
+
+  // Function Hide Modal
+  function hideModal() {
+    modalContainer.classList.remove('is-visible');
+  }
+
+  modalContainer.addEventListener('click', (e) => {
+    let target = e.target;
+    if (target === modalContainer) {
+      hideModal();
+    };
+  })
+
+  window.addEventListener('keyup', (e) => {
+    if (e.key === "Escape" && modalContainer.classList.contains('is-visible')) {
+      hideModal();
+    };
+  })
+
 
 // Function to load and get all pokemons from the API
     function loadList() {
@@ -28,14 +83,14 @@ let pokemonRepository = (function() {
       return response.json();
     }).then(function(details) {
       // Now we add the details to the item
-      item.imageUrl = details.sprites.front_default;
+      item.image = details.sprites.other.dream_world.front_default;
       item.height = details.height;
-      item.types = details.types;
+      types = details.types;
+      return item;
     }).catch(function(error) {
       console.error(error);
     });
   }
-
 
 // Function to print out the pokemonlist outside the IIFE
   function getAll() {
@@ -52,7 +107,7 @@ function addListItem(pokemon) {
   let list = document.querySelector('.pokemon-list');
   let listItem = document.createElement('li');
   let button = document.createElement('button');
-  button.innerText = pokemon.name;
+  button.innerText = pokemon.name.toUpperCase();
   button.classList.add('pokemon-button');
   // Console log the pokemon object when clicked
   button.addEventListener('click',function() {showDetails(pokemon)});
@@ -62,8 +117,8 @@ function addListItem(pokemon) {
 
 // Show future details ob the passed pokemon object
 function showDetails(pokemon) {
-  loadDetails(pokemon).then(function(){
-    console.log(pokemon);
+  loadDetails(pokemon).then(function(item){
+    showModal(item.name, item.height, item.image);
   })
 }
 
@@ -77,7 +132,6 @@ function showDetails(pokemon) {
     showDetails: showDetails
   }
 })();
-
 
 // Add a new pokemon object to the pokemonlist
 pokemonRepository.add({name: "Charmander", height: 10, types: ["Fire", "Volcano"]})
