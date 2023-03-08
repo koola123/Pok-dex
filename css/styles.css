@@ -10,7 +10,7 @@ html,
 body {
   font-family: Arial, sans-serif;
   margin-left: 130px;
-  background: #ccc;
+  background: green;
 }
 
 .pokemon-list {
@@ -38,7 +38,7 @@ font-family: 'Chewy', cursive;
 }
 
 .pokemon-list li button:hover {
-  background: hsl(265.1, 100%, 45.9%);
+  background: linear-gradient(hsl(265.1, 100%, 45.9%), red, yellow, lime);
   border: none;
   color: white;
 }
@@ -69,34 +69,63 @@ font-family: 'Chewy', cursive;
 }
 
 .modal {
+  position: relative;
   margin: auto;
   display: inline-block;
   box-sizing: border-box;
   border-radius: 12px;
   background: #fff;
   padding: 15px;
-  width: 450px;
-  height: 330px;
+  width: 700px;
+  height: 600px;
+  background: lime;
   text-align: left;
+  animation: animate 0.5s ease-in-out;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .modal-close {
   float: right;
-  position: relative;
-  top: 10px;
-  right: 10px;
+  background: crimson;
+  position: absolute;
+  top: 50px;
+  width: 150px;
+  height: 150px;
+  right: 50px;
   font-size: 20px;
   -webkit-appearance: none;
   border: 0;
   background: none;
-  color: #777;
+  padding: 20px;
+  border-radius: 50%;
+  font-weight: bold;
+  background: linear-gradient(hsl(265.1, 100%, 45.9%), red, yellow, lime);
 }
 
 .modal h1 {
-  margin-top: 20px;
+  text-align: center;
+  margin-top: 50px;
   margin-bottom: 20px;
+  letter-spacing: 10px;
 }
 
 .modal p {
   margin-top: 50px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.modal img {
+  margin-top: 30px;
+  margin-left: 210px;
+  width: 250px;
+  height: 250px;
 }
