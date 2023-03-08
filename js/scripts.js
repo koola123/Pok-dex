@@ -1,33 +1,26 @@
   // Wrap pokemonlist into an IIFE
 let pokemonRepository = (function() {
 // Proteced pokemonlist inside IIFE
-  let pokemonList = [
-    {
-      name: "Bulbasaur",
-      height: 1.7,
-      types: ["Grass, Ground"]
-    },
-    {
-      name: "Shiggy",
-      height: 1.3,
-      types: ["Water, Fontaine"]
-    },
-    {
-      name: "Mewtoo",
-      height: 2.0,
-      types: ["Psycho, Fire"]
-    },
-    {
-      name: "Kokuna",
-      height: 1.2,
-      types: ["Wood"]
-    },
-    {
-      name: "Smettbo",
-      height: 3,
-      types: ["Wind, Flower"]
+  let pokemonList = [];
+  let apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=150";
+
+// Function to load and get all pokemons from the API
+    function loadList() {
+      return fetch(apiUrl).then((response) => {
+        return response.json();
+      }).then((data) => {
+        data.results.forEach((item) => {
+          let pokemon = {
+            name: item.name,
+            detailsUrl: item.url
+          }
+          add(pokemon);
+        });
+      }).catch(function(error) {
+        console.log(error);
+      })
     }
-  ];
+
 
 // Function to print out the pokemonlist outside the IIFE
   function getAll() {
@@ -59,12 +52,12 @@ function showDetails(pokemon) {
 
 // Return both functions from pokemonRepository IIFE
   return {
-    getAll: getAll,
     add: add,
+    getAll: getAll,
+    loadList: loadList,
     addListItem: addListItem,
     showDetails: showDetails
   }
-
 })();
 
 
@@ -73,7 +66,9 @@ pokemonRepository.add({name: "Charmander", height: 10, types: ["Fire", "Volcano"
 
 // ForEach() function to print out the pokemonList
 // By using addListItem()
-pokemonRepository.getAll().forEach(function(item) {
-  return pokemonRepository.addListItem(item);
-
+pokemonRepository.loadList().then(function() {
+  // Now the data is loaded!
+  pokemonRepository.getAll().forEach(function(item) {
+    return pokemonRepository.addListItem(item);
+  })
 })
