@@ -55,7 +55,7 @@ font-family: 'Chewy', cursive;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: #222;
 
   /* to show it above other content */
   z-index: 999;
@@ -80,7 +80,7 @@ font-family: 'Chewy', cursive;
   height: 600px;
   background: lime;
   text-align: left;
-  animation: animate 0.5s ease-in-out;
+  animation: animate 2s ease-in-out;
 }
 
 @keyframes animate {
