@@ -20,4 +20,5 @@ ul {
   height: 200px;
   background: whitesmoke;
   border: 2px solid orchid;
+  border-radius: 50%;
 }

@@ -21,6 +21,21 @@ let pokemonRepository = (function() {
       })
     }
 
+// Function to load pokemon details
+  function loadDetails(item) {
+    let url = item.detailsUrl;
+    return fetch(url).then(function(response) {
+      return response.json();
+    }).then(function(details) {
+      // Now we add the details to the item
+      item.imageUrl = details.sprites.front_default;
+      item.height = details.height;
+      item.types = details.types;
+    }).catch(function(error) {
+      console.error(error);
+    });
+  }
+
 
 // Function to print out the pokemonlist outside the IIFE
   function getAll() {
@@ -47,7 +62,9 @@ function addListItem(pokemon) {
 
 // Show future details ob the passed pokemon object
 function showDetails(pokemon) {
-  console.log(pokemon);
+  loadDetails(pokemon).then(function(){
+    console.log(pokemon);
+  })
 }
 
 // Return both functions from pokemonRepository IIFE
@@ -55,6 +72,7 @@ function showDetails(pokemon) {
     add: add,
     getAll: getAll,
     loadList: loadList,
+    loadDetails: loadDetails,
     addListItem: addListItem,
     showDetails: showDetails
   }
