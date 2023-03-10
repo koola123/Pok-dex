@@ -5,7 +5,7 @@ It loads data from an *external API* and enables the user to view data points as
 
 
 ### See the hosted project right here:
-https://koola123.github.io/pokedex/
+https://koola123.github.io/Pokedex/
 
 ![]()
 
