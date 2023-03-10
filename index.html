@@ -11,6 +11,11 @@
   </head>
   <body>
     <header>
+    <!-- Navbar Image -->
+    <div class="navbar-img-container">
+        <img src="./img/pokemon.png" class="navbar-img mt-5 mb-1" alt="pokemon_image">
+      </div>
+    </div>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-sm navbar-dark bg-primary fixed-top px-5">
       <a class="navbar-brand" href="#">Pokédex</a>
@@ -23,10 +28,10 @@
        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
      </li>
      <li class="nav-item">
-       <a class="nav-link" href="#">Nav Item#1</a>
+       <a class="nav-link" href="#">About</a>
      </li>
      <li class="nav-item">
-       <a class="nav-link" href="#">Nav Item#2</a>
+       <a class="nav-link" href="#">Contact Us</a>
      </li>
     </ul>
   </div>
@@ -36,16 +41,14 @@
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <div class="modal-header">
+      <div class="modal-header no-border">
         <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body"></div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-      </div>
+      <div class="modal-body no-border"></div>
+      <div class="modal-footer no-border"></div>
     </div>
   </div>
 </div>
@@ -53,8 +56,8 @@
   <main>
     <div class="container-fluid page-container">
       <div class="row">
-        <div class="col-12">
-          <ul class="pokemon-list list-group class="page-container type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal""></ul>
+        <div class="col">
+          <ul class="pokemon-list class="page-container type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal""></ul>
           </div>
       </div>
     </div>

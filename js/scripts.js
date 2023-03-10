@@ -8,24 +8,30 @@ let pokemonRepository = (function() {
   function showModal(pokemon) {
     let modalBody = $('.modal-body');
     let modalTitle = $('.modal-title');
-    let modalHeader = $('.modal-header');
     // Empty the Modal Title and Modal Body
     modalTitle.empty();
     modalBody.empty();
 
     // Creating a new element for the name in the Modal Content
     let nameElement = $('<h3>' + pokemon.name.toUpperCase() + '</h3>');
-    // Creating a new img element in the  modal content
+
+    // Creating a new img element in the Modal Content
     let imageElement = $('<img class="modal-img">');
+
     imageElement.attr('src', pokemon.imageUrl);
     // Creating a new element for the height in the Modal Content
+
     let heightElement = $('<p>' + "<strong> Height: </strong>" + pokemon.height + " cm" + '</p>');
+
     // Creating a new element for the weight in the Modal Content
     let weightElement = $('<p>' + "<strong> Weight: </strong>" + pokemon.weight + " kg" + '</p>');
+
     // Creating a new element for the types in the Modal Content
-    let typesElement = $('<p>' + "<strong> Types: </strong>" + pokemon.types + '</p>');
+    let typesElement = $('<p>' + "<strong> Type: </strong>" + pokemon.types + '</p>');
+
     // Creating  a new element for the abilities in the Modal Content
     let abilitiesElement = $('<p>' + "<strong> Abilities: </strong>" + pokemon.abilities + '</p>');
+
     // Adding the new created elements to the Modal object
     modalTitle.append(nameElement);
     modalBody.append(imageElement);
@@ -64,11 +70,14 @@ let pokemonRepository = (function() {
       item.weight = details.weight;
       item.types = [];
       for (let i = 0; i <details.types.length; i++) {
-         item.types.push(" " + details.types[i].type.name);
+         item.types.push(" " + details.types[i].type.name[0].toUpperCase() 
+         + details.types[i].type.name.slice(1).toLowerCase());
+
        }
        item.abilities = [];
        for (let i = 0; i <details.abilities.length; i++) {
-         item.abilities.push(" " + details.abilities[i].ability.name);
+         item.abilities.push(" " + details.abilities[i].ability.name[0].toUpperCase() 
+         + details.abilities[i].ability.name.slice(1).toLowerCase());
        }
       return item;
     }).catch(function(error) {
