@@ -18,8 +18,8 @@ https://pokeapi.co/api/v2/pokemon/?limit=500
 
 
 ## Next Features
-* Enhance the UI / Animations / etc.
-** Pokemon Description
+* Pokemon Stats
+* Pokemon Animation
 
 #### Author
 Matthias Müringer
