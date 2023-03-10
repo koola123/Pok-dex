@@ -1,4 +1,4 @@
-# Pokémon Index
+# Pokédex
 
 Pokédex is a web app built with `JavaScript`, `HTML`, `CSS`, `j.Query` and `Bootstrap`.
 It loads data from an *external API* and enables the user to view data points as Pokémons from a JSON list.
