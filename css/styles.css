@@ -85,10 +85,6 @@ html, body {
   cursor: pointer;
 }
 
-.to-top:hover {
-  transform: rotate(45deg);
-}
-
 .to-top img {
   width: 50px;
   z-index: 999;
