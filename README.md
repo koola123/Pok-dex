@@ -17,9 +17,9 @@ https://pokeapi.co/api/v2/pokemon/?limit=500
 
 
 
-## Planned Features
-* Responsiveness for all mobile devices
-* About section
+## Next Features
+* Enhance the UI / Animations / etc.
+** Pokemon Description
 
 #### Author
 Matthias Müringer
