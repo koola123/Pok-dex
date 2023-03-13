@@ -3,23 +3,39 @@
 Pokédex is a web app built with `JavaScript`, `HTML`, `CSS`, `j.Query` and `Bootstrap`.
 It loads data from an *external API* and enables the user to view data points as Pokémons from a JSON list.
 
+The main purpose of this app is to present how I create a JavaScript app.
+
+This site was built using GitHub Pages.
+
 
 ### See the hosted project right here:
-https://koola123.github.io/Pokedex/
+https://koola123.github.io/Pokedex
 
-![]()
 
 ## Used API for this project:
 ```html
 https://pokeapi.co/api/v2/pokemon/?limit=500
 ```
 
+## Key Features:
+* Load data from an external source (API)
+* View a list of pokemon items on a responsive webpage
+* On user action (e.g., by clicking on a list item), view details for that item
+* Live search to find certain pokemons in the list
+
+## Code quality and performance
+
+* Javascript Minifier is used to remove unnecessary pieces of the file to decrease its file size.
+* Performance was checked with Chrome developer tools on different network speeds and different CPU speeds. In the case of recursive functions, the innerHTML and document.write() commands were replaced by specific DOM manipulation commands like classList.add, innerText, appendchild, etc.
+* ESLint was used for code quality and Prettier for code formatting.
+* The app was tested on different screen sizes with Chrome developer tools.
 
 
-
-## Next Features
-* Pokemon Stats
-* Pokemon Animation
+## Future improvements
+* Touch interactions (pointer events), e.g., swiping between pokemon items
+* Adding a loading indicator
+* Making the app more aesthetically pleasing or including more features, such as an optimized pokemon
+search
 
 #### Author
 Matthias Müringer
