@@ -27,7 +27,7 @@ https://pokeapi.co/api/v2/pokemon/?limit=500
 
 * Javascript Minifier is used to remove unnecessary pieces of the file to decrease its file size.
 * Performance was checked with Chrome developer tools on different network speeds and different CPU speeds. In the case of recursive functions, the innerHTML and document.write() commands were replaced by specific DOM manipulation commands like classList.add, innerText, appendchild, etc.
-* ESLint was used for code quality and Prettier for code formatting.
+* ESLint was used for code quality.
 * The app was tested on different screen sizes with Chrome developer tools.
 
 
