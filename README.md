@@ -36,9 +36,3 @@ https://pokeapi.co/api/v2/pokemon/?limit=500
 * Adding a loading indicator
 * Making the app more aesthetically pleasing or including more features, such as an optimized pokemon
 search
-
-#### Author
-Matthias Müringer
-
-#### Version
-1.0.0
