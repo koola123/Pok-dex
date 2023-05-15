@@ -9,7 +9,7 @@ This site was built using GitHub Pages.
 
 
 ### See the hosted project right here:
-https://koola123.github.io/Pokedex
+<b>[LIVE DEMO](https://koola123.github.io/pokedex/)</b>
 
 
 ## Used API for this project:
