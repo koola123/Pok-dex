@@ -5,24 +5,23 @@ It loads data from an *external API* and enables the user to view data points as
 
 
 ### See the hosted project right here:
-https://koola123.github.io/Pokedex/
+<br>
+
+<strong>[LIVE PREVIEW](https://koola123.github.io/Pokedex/)</strong>
 
 ![]()
+![Pokédex](img/pokedex.png)
+
 
 ## Used API for this project:
 ```html
 https://pokeapi.co/api/v2/pokemon/?limit=500
 ```
 
-
-
-
-## Next Features
+## Upcoming Features
 * Pokemon Stats
 * Pokemon Animation
 
-#### Author
-Matthias Müringer
+<br/>
 
-#### Version
-1.0.0
+Version: 1.0.0
