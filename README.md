@@ -26,7 +26,7 @@ https://pokeapi.co/api/v2/pokemon/?limit=500
 * Pokemon Stats
 * Pokemon Animation
 
-<br/>
+<br>
 
 Version: 1.0.0
 
