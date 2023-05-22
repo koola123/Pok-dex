@@ -11,7 +11,7 @@ This site was built using GitHub Pages.
 ## See the hosted project right here:
 <br>
 
-<strong>[LIVE DEMO](https://koola123.github.io/Pokedex/)</strong>
+<strong>[LIVE DEMO](https://koola123.github.io/pokedex/)</strong>
 
 ![]()
 ![Pokédex](img/pokedex.png)
