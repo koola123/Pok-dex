@@ -13,8 +13,8 @@ This site was built using GitHub Pages.
 
 <strong>[LIVE DEMO](https://koola123.github.io/Pokedex/)</strong>
 
-![]()
-![Pokédex](img/pokedex.png)
+<img src="img/pokedex2.png" width="500px"/>
+<img src="img/pokedex.png" width="500px"/>
 
 
 ## Used API for this project:
