@@ -6,15 +6,16 @@ It loads data from an *external API* and enables the user to view data points as
 The main purpose of this app is to present how I create a JavaScript app.<br>
 
 This site was built using GitHub Pages.
-<br>
 
 ## See the hosted project right here:
 <br>
 
 <strong>[LIVE DEMO](https://koola123.github.io/pokedex/)</strong>
 
-<img src="img/pokedex2.png" width="500px"/>
-<img src="img/pokedex.png" width="500px"/>
+<br>
+
+<img src="img/pokedex2.png" width="800px"/>
+<img src="img/pokedex.png" width="800px"/>
 
 
 ## Used API for this project:
