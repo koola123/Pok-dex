@@ -11,7 +11,7 @@ This site was built using GitHub Pages.
 ## See the hosted project right here:
 <br>
 
-<strong>[LIVE DEMO](https://koola123.github.io/Pokedex/)</strong>
+<strong>[LIVE DEMO](https://koola123.github.io/pokedex/)</strong>
 
 <img src="img/pokedex2.png" width="500px"/>
 <img src="img/pokedex.png" width="500px"/>
@@ -26,7 +26,7 @@ https://pokeapi.co/api/v2/pokemon/?limit=500
 * Pokemon Stats
 * Pokemon Animation
 
-<br/>
+<br>
 
 Version: 1.0.0
 
