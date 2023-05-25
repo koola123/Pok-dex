@@ -12,7 +12,7 @@ The app is using github pages.
 <img src="img/pokedex2.png" width="800px"/>
 <img src="img/pokedex.png" width="800px"/>
 
-# 🎯 Technology used:
+## 🎯 Technology used:
 - HTML5
 - CSS3
 - j.Query
@@ -20,12 +20,12 @@ The app is using github pages.
 - Bootstrap
 
 
-# Project API Link:
+## Project API Link:
 ```html
 https://pokeapi.co/api/v2/pokemon/?limit=500
 ```
 
-# 🛠 Next Features
+## 🛠 Next Features
 * Add more stats
 * Pokemon animation
 
