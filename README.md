@@ -26,8 +26,8 @@ https://pokeapi.co/api/v2/pokemon/?limit=500
 ```
 
 ## 🛠 Next Features
-* Add more stats
-* Pokemon animation
+* Touch interactions (pointer events), e.g., swiping between items
+* Adding a loading indicator
 
 <br>
 
