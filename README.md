@@ -12,7 +12,7 @@ The app is using github pages.
 <img src="img/pokedex2.png" width="800px"/>
 <img src="img/pokedex.png" width="800px"/>
 
-## 🎯 Technology stack:
+## Technology stack:
 - HTML5
 - CSS3
 - j.Query
