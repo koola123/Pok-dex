@@ -9,7 +9,6 @@ The app is using github pages.
 
 <br>
 
-<img src="img/pokedex2.png" width="800px"/>
 <img src="img/pokedex.png" width="800px"/>
 
 ## Technology stack:
