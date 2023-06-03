@@ -5,7 +5,7 @@ Main purpose of this app is to present how I create a JavaScript application.<br
 The app is using github pages.
 <br>
 
-<strong>[LIVE DEMO](https://koola123.github.io/pokedex/)</strong>
+<strong>[LIVE DEMO](https://koola123.github.io/Pokedex-App/)</strong>
 
 <br>
 
